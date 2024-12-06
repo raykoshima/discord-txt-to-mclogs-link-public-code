@@ -24,21 +24,15 @@ client.on('messageCreate', async (message) => {
             const response = await fetch(attachment.url);
             const textContent = await response.text();
   
-            // Log the content of the file to the console
             const Data = new url.URLSearchParams({ content: textContent });
             const mclogs = await axios.post("https://api.mclo.gs/1/log" , Data.toString()).then(function (response) {
-                // console.log(response);
                 console.log(`save file to ${response.data.url}`)
-                message.reply(`here you go <@296983929456427008> ${response.data.url}`)
+                message.reply(`${attachment.name} ${response.data.url}`)
               .catch(console.error);
               })
               .catch(function (error) {
                 console.log(error);
               });
-            // await message.reply(`here mclogs of that file ${mclogs.data.url}`)
-            //   .catch(console.error);
-
-            // console.log(JSON.stringify(jsonData, null, 2));
             
           } catch (error) {
             console.error('Error fetching text file:', error);
