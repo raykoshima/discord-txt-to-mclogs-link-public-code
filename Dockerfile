@@ -4,6 +4,8 @@ FROM node:18-alpine
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
+ARG TOKEN
+
 # Copy package.json and package-lock.json to install dependencies
 COPY package*.json ./
 
