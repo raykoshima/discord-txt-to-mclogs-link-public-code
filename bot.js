@@ -35,7 +35,7 @@ client.on('messageCreate', async (message) => {
             if (targetChannel) {
               const targetMessage = await targetChannel.send(`${attachment.name} ${logUrl} <@${message.author.id}> <@1362830438460035073>`);
               await message.reply(
-                `ข้อความได้ถูกส่งต่อไปอีกห้องแล้ว ${targetMessage.url}`
+                `ข้อความวิเคราะห์ได้ถูกส่งต่อไปอีกห้องแล้ว ${targetMessage.url}`
               );
 
             } else {
