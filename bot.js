@@ -8,8 +8,10 @@ const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent],
 });
 
-const SOURCE_CHANNEL_ID = "989585821881471067";
-const TARGET_CHANNEL_ID = "1370618961044967425";
+// const SOURCE_CHANNEL_ID = "989585821881471067";
+// const TARGET_CHANNEL_ID = "1370618961044967425";
+const SOURCE_CHANNEL_ID = "12";
+const TARGET_CHANNEL_ID = "34";
 
 client.once('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -53,3 +55,4 @@ client.on('messageCreate', async (message) => {
 });
 
 client.login(process.env.TOKEN);
+
